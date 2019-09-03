@@ -2,14 +2,16 @@
 import * as React from 'react';
 import AllCinemas from './AllCinemas';
 import { connect } from 'react-redux';
-import {getCinemas} from '../actions';
+import {getCinemas} from '../actions/cinema';
 
-class AllEventsContainer extends React.Component {
+class AllCinemasContainer extends React.Component {
   componentDidMount() {
+    console.log('AllCinemasContainer', this.props.getCinemas)
     this.props.getCinemas()
   }
 
   render() { 
+    console.log('this.props', this.props)
      return <div> 
        <AllCinemas 
           cinemas={this.props.cinemas}
@@ -27,4 +29,4 @@ function mapStateToProps(state) {
 export default connect(
   mapStateToProps,
   {getCinemas}
-  ) (AllEventsContainer);
+  ) (AllCinemasContainer);

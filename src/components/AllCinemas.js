@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 
 export default function AllCinemas(props) {
+  console.log('props in AllCinemas', props)
+  console.log('props in allCinemas props.cinemas', props.cinemas)
   const cinemas = props
     .cinemas 
     .map(cinema => 
