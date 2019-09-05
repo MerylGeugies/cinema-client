@@ -43,6 +43,7 @@ function ReviewFormContainer(props) {
       onSubmit={onSubmit}
       value={inputs}
       onChange={onChange}
+      //cinema={cinema.id}
     />
   )
 

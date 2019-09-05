@@ -4,6 +4,8 @@ import AllCinemas from './AllCinemas';
 import { connect } from 'react-redux';
 import {getCinemas} from '../actions/cinema';
 
+import './AllCinemas.scss'
+
 class AllCinemasContainer extends React.Component {
   componentDidMount() {
     console.log('AllCinemasContainer', this.props.getCinemas)
@@ -12,7 +14,7 @@ class AllCinemasContainer extends React.Component {
 
   render() { 
     console.log('this.props', this.props)
-     return <div> 
+     return <div className='all-cinemas'> 
        <AllCinemas 
           cinemas={this.props.cinemas}
     />
