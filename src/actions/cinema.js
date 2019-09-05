@@ -11,12 +11,11 @@ export function allCinemas(payload) {
 }
 
 export const getCinemas = () => (dispatch, getState) => {
-  console.log('hello')
   const state = getState()
   const { cinemas } = state
   console.log('state in action getCinemas', state)
 
-  if (!cinemas.length) {
+  // if (cinemas.length === 0) {
     request
       .get(`${url}/cinemas`)
       .then(response => {
@@ -26,5 +25,5 @@ export const getCinemas = () => (dispatch, getState) => {
         console.log('response.body getCinemas',response.body)
       })
       .catch(console.error)
-  }
+  
 }
