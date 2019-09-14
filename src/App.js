@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import AllCinemasContainer from './components/AllCinemasContainer';
+import ReviewFormContainer from './components/ReviewFormContainer';
 
-import './App.css';
+import './App.scss';
 
 class App extends Component {
   render() {
@@ -10,6 +11,7 @@ class App extends Component {
         <div className='app'>
           {/* <header> <img alt='logo' src=''> </img></header> */}
           <Route exact path='/cinemas' component={AllCinemasContainer} />
+          <Route exact path='/reviews' component={ReviewFormContainer} />
         </div>
     );
   }
