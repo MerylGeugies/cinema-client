@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import { render } from 'react-dom';
 
 const Star = ({ selected = false, onClick = f => f }) => (
-  <div className={selected ? "star selected" : "star"} onClick={onClick} />
+  <div className={selected 
+    ? "star selected" 
+    : "star"} 
+    onClick={onClick} 
+  />
 );
 
 function StarRating({ totalStars }) {
@@ -14,7 +18,7 @@ function StarRating({ totalStars }) {
         <Star
           key={i}
           selected={i < starsSelected}
-          onClick={() => this.change(i + 1)}
+          onClick={() => selectStar(i + 1)}
         />
       ))}
       <p>
