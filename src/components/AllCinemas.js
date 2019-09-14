@@ -8,15 +8,16 @@ export default function AllCinemas(props) {
   const cinemas = props
     .cinemas 
     .map(cinema => 
-      <div
+      <div className='cinema-box'
         key={cinema.id}>
 
         <Link
           to={`/cinema/${cinema.id}`} >
-            <img alt={cinema.name} src={cinema.picture}></img>
+            <img className='pic' alt={cinema.name} src={cinema.picture}></img>
         </Link>
-        {cinema.name}
-
+        <div className='cinema-title'>
+          {cinema.name}
+        </div>
       </div>)
 
     return (
